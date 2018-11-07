@@ -1,0 +1,23 @@
+---
+title: "Animal Sleep Test"
+author: "Madeline Berger"
+date: "11/6/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+sleep <- read_csv("sleep.csv")
+```
+
+```{r}
+sleep_scatter <- ggplot(sleep, aes(x = brain, y = total_sleep))+
+  geom_point()
+
+sleep_scatter
+```
+
